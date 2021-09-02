@@ -1,0 +1,86 @@
+<%- include('./partials/header'); %>
+
+<section class="yourtop4">
+  <div class="row">
+    <div class="col-lg-4"><h2 class="top4tag">YOUR TOP 4</h2></div>
+    <div class="col-lg-8">
+      <img src="/images/yourtop4/first-image.png" class="first-image podium">
+      <div class="first-bio">
+        <h4>First Manager Placeholder</h4>
+        <p>First Club Placeholder</p>
+      </div>
+      <img src="/images/yourtop4/second-image.png" class="second-image podium">
+      <div class="second-bio">
+        <h4>Second Manager Placeholder</h4>
+        <p>Second Club Placeholder</p>
+      </div>
+      <img src="/images/yourtop4/third-image.png" class="third-image podium">
+      <div class="third-bio">
+        <h4>Third Manager Placeholder</h4>
+        <p>Third Club Placeholder</p>
+      </div>
+      <img src="/images/yourtop4/fourth-image.png" class="fourth-image podium">
+      <div class="fourth-bio">
+        <h4>Fourth Manager Placeholder</h4>
+        <p>Fourth Club Placeholder</p>
+      </div>
+    </div>
+   </div>
+</section>
+
+<section class="c-shine nextDeadline" id="logo">
+  <h3>DEADLINE: <%= deadline.toLocaleDateString('en-GB', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: "numeric", minute: "numeric", second: "numeric"}) %></h3>
+</section>
+
+
+
+<section class="transferCentre">
+  <div class="split left">
+
+    <h2 class="transferTitle">TRANSFER CENTRE</h2>
+
+    <div class="transfer1">
+      <h3>Club Placeholder1</h3>
+      <p><strong>(Value)</strong> - (Name) - OUT</p>
+    </div>
+    <div class="transfer2">
+      <h3>Club Placeholder2</h3>
+      <p><strong>(Value)</strong> - (Name) - OUT</p>
+    </div>
+    <div class="transfer3">
+      <h3>Club Placeholder2</h3>
+      <p><strong>(Value)</strong> - (Name) - OUT</p>
+    </div>
+    <div class="transfer4">
+      <h3>Club Placeholder2</h3>
+      <p><strong>(Value)</strong> - (Name) - OUT</p>
+    </div>
+  </div>
+
+  <div class="split right">
+    <h2 class="transferTitle"><%= gameweek %></h2>
+    <div class="transfer1">
+      <h3> at (Time)</h3>
+      <p>(Value) - (Name) - IN</p>
+    </div>
+    <div class="transfer2">
+      <h3> at (Time)</h3>
+      <p>(Value) - (Name) - IN</p>
+    </div>
+    <div class="transfer3">
+      <h3> at (Time)</h3>
+      <p>(Value) - (Name) - IN</p>
+    </div>
+    <div class="transfer4">
+      <h3> at (Time)</h3>
+      <p>(Value) - (Name) - IN</p>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+<%- include('./partials/footer'); %>
+

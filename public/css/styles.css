@@ -1,0 +1,348 @@
+/*Index Page*/
+
+	/*Your Top 4 Section*/
+
+.top4tag{
+	padding: 30px;
+	font-size: 50px;
+	font-family: 'Archivo Black', sans-serif;
+	margin-left: 25%;
+	float: left;
+	padding-top: 200px;
+	text-align: center;
+	color: white;
+}
+
+
+.yourtop4{
+
+	background: linear-gradient(0deg, #002672, white);
+	height:  600px;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.top4tag{
+	margin-left: 25%;
+	float: left;
+	padding-top: 200px;
+
+}
+
+.first-image{
+	width: 300px;
+	height: 600px;
+	border-radius: 15px;
+	object-fit: cover;
+	position: absolute;
+	right: 65%;
+	z-index: 4;	
+}
+
+.second-image{
+	width: 300px;
+	height: 600px;
+	border-radius: 15px;
+	object-fit: cover;
+	position: absolute;
+	right: 45%;
+	z-index: 3;	
+}
+
+.third-image{
+	width: 300px;
+	height: 600px;
+	border-radius: 15px;
+	object-fit: cover;
+	position: absolute;
+	right: 25%;
+	z-index: 2;	
+}
+
+.fourth-image{
+	width: 300px;
+	height: 600px;
+	border-radius: 15px;
+	object-fit: cover;
+	position: absolute;
+	right: 5%;
+	z-index: 1;
+}
+
+.front{
+	z-index: 6;
+}
+
+.first-bio{
+	background: rgb(112,128,144, 0.5);
+	top: 500px;
+	display: block;
+	position: absolute;
+	right: 67%;
+	opacity: 0;
+	width: 350px;
+	z-index: 7;
+}
+.second-bio{
+	background: rgb(112,128,144, 0.5);
+	top: 500px;
+	display: block;
+	position: absolute;
+	right: 47%;
+	opacity: 0;
+	width: 350px;
+	z-index: 7;
+}
+.third-bio{
+	background: rgb(112,128,144, 0.5);
+	top: 500px;
+	display: block;
+	position: absolute;
+	right: 27%;
+	opacity: 0;
+	width: 350px;
+	z-index: 7;
+}
+.fourth-bio{
+	background: rgb(112,128,144, 0.5);
+	top: 500px;
+	display: block;
+	position: absolute;
+	right: 7%;
+	opacity: 0;
+	width: 350px;
+	z-index: 7;
+}
+
+@media (max-width: 1150px){
+.top4tag{
+	margin-left: 5%;
+	float: left;
+	padding-top: 200px;
+}
+.first-image{
+	border-radius: 15px;
+	width: 150px;
+	height: 600px;
+	object-fit: cover;
+	position: absolute;
+	right: 65%;
+	z-index: 4;	
+}
+.second-image{
+	border-radius: 15px;
+	width: 150px;
+	height: 600px;
+	object-fit: cover;
+	position: absolute;
+	right: 45%;
+	z-index: 3;	
+}
+.third-image{
+	border-radius: 15px;
+	width: 150px;
+	height: 600px;
+	object-fit: cover;
+	position: absolute;
+	right: 25%;
+	z-index: 2;	
+}
+.fourth-image{
+	border-radius: 15px;
+	width: 150px;
+	height: 600px;
+	object-fit: cover;
+	position: absolute;
+	right: 5%;
+	z-index: 1;
+}
+}
+
+@media (max-width: 992px){
+.yourtop4{
+	background: linear-gradient(0deg, #002672, white);
+	height:  600px;
+	position: relative;
+	width: 100%;
+	margin: 0;
+}
+.top4tag{
+	font-size: 10vw;
+	padding-top: 50px;
+}
+.first-image{
+	height: 380px;
+}
+.second-image{
+	height: 380px;
+}
+.third-image{
+	height: 380px;
+}
+.fourth-image{
+	height: 380px;
+}
+}
+
+/*Next Deadline*/
+
+.nextDeadline{
+	background: linear-gradient(135deg,  rgba(225,0,0,1) 0%,rgba(221,31,31,1) 20%,rgba(224,98,98,1) 81%,rgba(225,0,0,1) 100%);
+	border-top: 20px;
+	border-bottom: 20px;
+	border-style: outset;
+	border-color: #C10000;
+	text-align: center;
+	color: white;
+}
+
+.nextDeadline h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 3vw;
+	padding: 1% 0;
+}
+
+
+
+
+
+/*	Transfers Section*/
+
+.transferCentre{
+	position: relative;
+	background-color: #002672;
+	height: 900px;
+	text-align: center;
+	color: white;
+}
+
+/* Split the screen in half */
+.split {
+  height: 900px;
+  border-radius: 20px;
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  margin-left: 10%;
+  background-color: black;
+  color: yellow;
+}
+.left h2{
+	text-align: right;
+	padding-right: 5%;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  margin-right: 10%;
+  background-color: yellow;
+  color: black;
+}
+.right h2{
+	text-align: left;
+	padding-left: 5%;
+}
+
+/* If you want the content centered horizontally and vertically */
+
+.transferTitle{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  width: 100%;
+}
+
+.transferCentre h3{
+	font-size: 3vw;
+}
+.transferCentre p{
+	font-size: 2vw;
+}
+
+.transfer1{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.transfer2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.transfer3{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.transfer4{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 992px){
+.split{
+	width: 50%;
+}
+.left{
+	margin-left: 0;
+}
+.right{
+	margin-right: 0;
+}
+}
+
+/*Live Page*/
+
+.section{
+
+	padding-bottom: 50px;
+}
+table {
+	text-align: center;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+	text-align: centre;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+	text-align: center;
+}
+
+.player{
+	max-width: 110px;
+	float: left;
+	text-align: center;
+}
+

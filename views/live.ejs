@@ -1,0 +1,438 @@
+<%- include('./partials/header'); %>
+
+
+<section class="intro">
+	<div>
+		<h1>LIVE TABLE </h1>
+	</div>
+	<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	</div>
+</section>
+
+
+<section class="livetable">
+	
+
+	<table id="schInfoTable">
+	    <thead>
+	      <th onclick="sortTable(0)">New Position</th>
+	      <th onclick="sortTable(1)">Old Position</th>
+	      <th onclick="sortTable(2)">Manager</th>
+	      <th onclick="sortTable(3)">Club Name</th>
+	      <th onclick="sortTable(4)">GW Points</th>
+	      <th onclick="sortTable(5)">Players</th>
+	      <th onclick="sortTable(6)">Total Points</th>
+	      <th onclick="sortTable(7)">Captain</th>
+	      <th onclick="sortTable(8)">Points Spent</th>
+	      <th onclick="sortTable(9)">Chips</th>
+	    </thead>
+
+	    <tbody>
+
+	      <tr class='sort' onclick="openView('mossTeam')">
+	        <td><%=mossTable.new_position%></td>
+	        <td><%=mossTable.old_position%></td>
+	        <td>Moose</td>
+	        <td>Athletic Beeboi</td>
+	        <td><%=mossTable.gw_points%></td>
+	        <td><%=mossTable.players%></td>
+	        <td><%=mossTable.total_points%></td>
+	        <td><%=mossTable.captain%></td>
+	        <td><%=mossTable.points%></td>
+	        <td><%=mossTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="mossTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% mossPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('marwayTeam')">
+	        <td><%=marwayTable.new_position%></td>
+	        <td><%=marwayTable.old_position%></td>
+		    <td>Marway</td>
+		    <td>Gleeb City FC</td>
+		    <td><%=marwayTable.gw_points%></td>
+		    <td><%=marwayTable.players%></td>
+		    <td><%=marwayTable.total_points%></td>
+		    <td><%=marwayTable.captain%></td>
+		    <td><%=marwayTable.points%></td>
+		    <td><%=marwayTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="marwayTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% marwayPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('jaspalTeam')">
+	        <td><%=jaspalTable.new_position%></td>
+	        <td><%=jaspalTable.old_position%></td>
+		    <td>Jasper</td>
+		    <td>Jasperinis Roquetas</td>
+		    <td><%=jaspalTable.gw_points%></td>
+		    <td><%=jaspalTable.players%></td>
+		    <td><%=jaspalTable.total_points%></td>
+		    <td><%=jaspalTable.captain%></td>
+		    <td><%=jaspalTable.points%></td>
+		    <td><%=jaspalTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="jaspalTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% jaspalPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('kentTeam')">
+	      	<td><%=kentTable.new_position%></td>
+	        <td><%=kentTable.old_position%></td>
+		    <td>Kent</td>
+		    <td>Thotingham Forest</td>
+		    <td><%=kentTable.gw_points%></td>
+		    <td><%=kentTable.players%></td>
+		    <td><%=kentTable.total_points%></td>
+		    <td><%=kentTable.captain%></td>
+		    <td><%=kentTable.points%></td>
+		    <td><%=kentTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="kentTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% kentPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('jalifTeam')">
+	        <td><%=jalifTable.new_position%></td>
+	        <td><%=jalifTable.old_position%></td>
+		    <td>Jalif</td>
+		    <td>Shottingham Forest</td>
+		    <td><%=jalifTable.gw_points%></td>
+		    <td><%=jalifTable.players%></td>
+		    <td><%=jalifTable.total_points%></td>
+		    <td><%=jalifTable.captain%></td>
+		    <td><%=jalifTable.points%></td>
+		    <td><%=jalifTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="jalifTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% jalifPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('alkaTeam')">
+	        <td><%=alkaTable.new_position%></td>
+	        <td><%=alkaTable.old_position%></td>
+		    <td>Alka</td>
+		    <td>Barcebloima FC</td>
+		    <td><%=alkaTable.gw_points%></td>
+		    <td><%=alkaTable.players%></td>
+		    <td><%=alkaTable.total_points%></td>
+		    <td><%=alkaTable.captain%></td>
+		    <td><%=alkaTable.points%></td>
+		    <td><%=alkaTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="alkaTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% alkaPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('dockerTeam')">
+	        <td><%=dockerTable.new_position%></td>
+	        <td><%=dockerTable.old_position%></td>
+		    <td>Docker</td>
+		    <td>Dynamo Pornbots</td>
+		    <td><%=dockerTable.gw_points%></td>
+		    <td><%=dockerTable.players%></td>
+		    <td><%=dockerTable.total_points%></td>
+		    <td><%=dockerTable.captain%></td>
+		    <td><%=dockerTable.points%></td>
+		    <td><%=dockerTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="dockerTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% dockerPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('rogersTeam')">
+	        <td><%=rogersTable.new_position%></td>
+	        <td><%=rogersTable.old_position%></td>
+		    <td>Rogers</td>
+		    <td>Tog Ol' Bitty F.C.</td>
+		    <td><%=rogersTable.gw_points%></td>
+		    <td><%=rogersTable.players%></td>
+		    <td><%=rogersTable.total_points%></td>
+		    <td><%=rogersTable.captain%></td>
+		    <td><%=rogersTable.points%></td>
+		    <td><%=rogersTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="rogersTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% rogersPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('dukeTeam')">
+	        <td><%=dukeTable.new_position%></td>
+	        <td><%=dukeTable.old_position%></td>
+		    <td>Dukey</td>
+		    <td>A Job On Your Blaje</td>
+		    <td><%=dukeTable.gw_points%></td>
+		    <td><%=dukeTable.players%></td>
+		    <td><%=dukeTable.total_points%></td>
+		    <td><%=dukeTable.captain%></td>
+		    <td><%=dukeTable.points%></td>
+		    <td><%=dukeTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="dukeTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% dukePicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('spavTeam')">
+	        <td><%=spavTable.new_position%></td>
+	        <td><%=spavTable.old_position%></td>
+		    <td>Spav</td>
+		    <td>Los Coq</td>
+		    <td><%=spavTable.gw_points%></td>
+		    <td><%=spavTable.players%></td>
+		    <td><%=spavTable.total_points%></td>
+		    <td><%=spavTable.captain%></td>
+		    <td><%=spavTable.points%></td>
+		    <td><%=spavTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="spavTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% spavPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('quinnTeam')">
+	        <td><%=quinnTable.new_position%></td>
+	        <td><%=quinnTable.old_position%></td>
+		   	<td>Queef</td>
+		   	<td>Squidgewell United</td>
+		   	<td><%=quinnTable.gw_points%></td>
+		   	<td><%=quinnTable.players%></td>
+		   	<td><%=quinnTable.total_points%></td>
+		   	<td><%=quinnTable.captain%></td>
+		   	<td><%=quinnTable.points%></td>
+		   	<td><%=quinnTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="quinnTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% quinnPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('aggarwalTeam')">
+	        <td><%=aggarwalTable.new_position%></td>
+	        <td><%=aggarwalTable.old_position%></td>
+		    <td>Aggarwoo</td>
+		    <td>JobbyJobbers FC</td>
+		    <td><%=aggarwalTable.gw_points%></td>
+		    <td><%=aggarwalTable.players%></td>
+		    <td><%=aggarwalTable.total_points%></td>
+		    <td><%=aggarwalTable.captain%></td>
+		    <td><%=aggarwalTable.points%></td>
+		    <td><%=aggarwalTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="aggarwalTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% aggarwalPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('powTeam')">
+	        <td><%=powTable.new_position%></td>
+	        <td><%=powTable.old_position%></td>
+		 	<td>Pow</td>
+		 	<td>Hellas Gearona</td>
+		 	<td><%=powTable.gw_points%></td>
+		 	<td><%=powTable.players%></td>
+		 	<td><%=powTable.total_points%></td>
+		 	<td><%=powTable.captain%></td>
+		 	<td><%=powTable.points%></td>
+		 	<td><%=powTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="powTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% powPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+	      <tr class='sort' onclick="openView('spedingTeam')">
+	        <td><%=spedingTable.new_position%></td>
+	        <td><%=spedingTable.old_position%></td>
+			<td>Speding</td>
+			<td>The Builders</td>
+			<td><%=spedingTable.gw_points%></td>
+			<td><%=spedingTable.players%></td>
+			<td><%=spedingTable.total_points%></td>
+			<td><%=spedingTable.captain%></td>
+			<td><%=spedingTable.points%></td>
+			<td><%=spedingTable.chips%></td>
+	      </tr>
+
+	      <tr style="display:none; background-color: #cbe7cb;" class="spedingTeam">
+	      	<td colspan="10">
+	      		<div>
+	      			<% spedingPicks.forEach((pick)=>{ %>
+	      			<div class="player">
+		   				<div class="picture"><img src="<%=pick.url%>"><figcaption></div>
+		   				<div class="name"><%=pick.second_name%></div>
+		   				<div class="points"><%=pick.live_points%></div>
+		   			</div>
+		   			<%})%>
+		   		</div>
+		   	</td>
+	      </tr>
+
+
+	  </tbody>
+	  </table>
+</section>
+
+
+
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./partials/footer'); %>
